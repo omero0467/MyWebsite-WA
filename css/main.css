@@ -7,6 +7,9 @@
   margin: auto;
   overflow: hidden;
 }
+.container footer {
+  text-align: center;
+}
 
 .btn-dark, .btn-light, .btn-main {
   display: inline-block;
@@ -18,7 +21,7 @@
 }
 
 .btn-main {
-  color: #333;
+  color: rgb(214, 214, 214);
   background-color: purple;
 }
 .btn-light {
@@ -102,6 +105,7 @@ input[class^=btn-]:hover {
 }
 .body-team {
   background-color: #002d49;
+  max-height: auto;
 }
 
 @keyframes fadeup {
@@ -127,6 +131,78 @@ input[class^=btn-]:hover {
     opacity: 1;
   }
 }
+.mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+.mobile-nav .toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+.mobile-nav .toggle.active {
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.body-gallery.active {
+  background: url(../assets/images/Inspo.jpeg) center/cover;
+  transform: translateX(-300px);
+}
+
+.body-gallery2.active {
+  position: relative;
+  background: #333;
+  transform: translateX(-300px);
+}
+
+.body-team.active {
+  transform: translateX(-300px);
+}
+
+.header-home.active {
+  transform: translateX(-300px);
+}
+
+.mobile-menu {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-menu ul {
+  position: relative;
+}
+.mobile-menu ul li {
+  list-style: none;
+}
+.mobile-menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+.mobile-menu ul li a:hover {
+  color: rgb(254, 182, 254) !important;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -155,6 +231,15 @@ h4 {
 
 img {
   width: 100%;
+}
+
+.mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+.mobile-nav img {
+  width: 150px;
 }
 
 .main-nav {
@@ -200,14 +285,14 @@ img {
 }
 .header-home .header-content {
   text-align: center;
-  padding-top: calc(29% - 40vh);
+  padding-top: calc(25% - 10vh);
 }
 .header-home .header-content h1 {
   font-size: 4rem;
   line-height: 1.2;
 }
 .header-home .header-content .social {
-  margin-top: calc(40% - 40vh);
+  margin-top: calc(25% - 10vh);
   display: flex;
   justify-content: center;
   align-items: center;

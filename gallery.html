@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/dist/css/Normalize.css">
     <link rel="stylesheet" href="/dist/css/main.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="/dist/css/mobile.css">
 
 </head>
 
@@ -17,7 +18,10 @@
 
         <header class="header-gallery">
             <div class="container">
-                
+                <div class="mobile-nav">
+                    <a href="index.html"><img src="/dist/assets/images/logo/Logo@3x.png" alt="" id="logo"></a>
+                    <div class="toggle"></div>
+                </div>
                 <nav class="main-nav">
                     <a href="index.html"><img src="/dist/assets/images/logo/Logo@3x.png" alt="" id="logo"></a>
                     <ul>
@@ -66,15 +70,36 @@
                 <div class="card" data-aos-delay="150"         data-aos-anchor-placement="left-center"data-aos="fade-right"><img src="/dist/assets/images/JancoPhotos/janco - 19.jpeg" alt=""></div>
                 <div class="card" data-aos-delay="150"         data-aos-anchor-placement="left-center"data-aos="fade-left"><img src="/dist/assets/images/JancoPhotos/janco - 20.jpeg" alt=""></div>
                 <div class="card" data-aos-delay="150"         data-aos-anchor-placement="left-center"data-aos="fade-right"><img src="/dist/assets/images/JancoPhotos/janco - 21.jpeg" alt=""></div>
+                <div class="card" data-aos-delay="150"         data-aos-anchor-placement="left-center"data-aos="fade-right"><img src="/dist/assets/images/Fish.jpeg" alt=""></div>
                 <div class="card" data-aos-delay="150"         data-aos-anchor-placement="top-center"data-aos="fade-up"><img src="/dist/assets/images/JancoPhotos/janco - 22.jpeg" alt=""></div>
             </div>
+            <footer data-aos="fade-left" data-aos-anchor-placement="bottom"><a href="#" class="btn-light">Go Back Up</a></footer>
         </div>
+    </div>
+    <div class="mobile-menu ">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="team.html" >Team</a></li>
+        </ul>
     </div>
     <script src="js/gallery.js"></script>
     <script src="js/aos.js"></script>
     <script>
         AOS.init();
     </script>
+        <script>
+            const menuToggle = document.querySelector('.toggle');
+            const menu = document.querySelector('.mobile-menu');
+            const body = document.querySelector('.body-gallery') ;
+            const body2 = document.querySelector('.body-gallery2');
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                menu.classList.toggle('active');
+                body.classList.toggle('active');
+                body2.classList.toggle('active');
+            });
+        </script>
 
 </body>
 

@@ -17,7 +17,10 @@
         <header class="header-team">
             <div class="overlay"></div>
             <div class="container">
-                <div class="toggle"></div>
+                <div class="mobile-nav">
+                    <a href="index.html"><img src="/dist/assets/images/logo/Logo@3x.png" alt="" id="logo"></a>
+                    <div class="toggle"></div>
+                </div>
                 <nav class="main-nav">
                     <a href="index.html"><img src="/dist/assets/images/logo/Logo@3x.png" alt="" id="logo"></a>
                     <ul>
@@ -32,57 +35,65 @@
                 <p class="lead">Our team is fluid and accepting to anyone who is passionate about art in all its forms,
                     But espesically fund of music and graphic art. Over the years we evolved our personas and our art
                     along with it.</p>
-                </div>
-            </header>
-            
-            <div class="team-vertical">
-                <div class="container">
-                    <div class="card" data-aos-delay="50" data-aos-anchor-placement="top-center" data-aos="fade-right"><img
+            </div>
+        </header>
+
+        <div class="team-vertical">
+            <div class="container">
+                <div class="card" data-aos-delay="50" data-aos-anchor-placement="top-center" data-aos="fade-right"><img
                         class="ziv" src="/dist/assets/images/ZivSerious.jpeg" alt="">
-                        <div>
-                            <h3>Janco / Zivi</h3>
-                            <p class="second">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi ipsa quo
-                                aliquid optio? Nam repellendus, expedita, esse officia laborum nobis, libero eos dolorem
-                                magni nihil consequuntur omnis culpa dolorum ratione.</p>
-                            </div>
-                        </div>
-                        <div class="card" data-aos-delay="200" data-aos-anchor-placement="top-center" data-aos="fade-left"><img
-                            class="yot" src="/dist/assets/images/YotamRep.jpeg" alt="">
-                            <div>
-                                <h3>Migbaat / Yot</h3>
-                                <p class="second">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi ipsa quo
-                                    aliquid optio? Nam repellendus, expedita, esse officia laborum nobis, libero eos dolorem
-                                    magni nihil consequuntur omnis culpa dolorum ratione.</p>
-                                </div>
-                            </div>
-                            <div class="card" data-aos-delay="200" data-aos-anchor-placement="top-center" data-aos="fade-right"><img
-                                class="omer" src="/dist/assets/images/OmerRep.jpeg" alt="">
-                                <div>
-                                    <h3>Omer</h3>
-                                    <p class="second">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi ipsa quo
-                                        aliquid optio? Nam repellendus, expedita, esse officia laborum nobis, libero eos dolorem
-                                        magni nihil consequuntur omnis culpa dolorum ratione.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
+                    <div>
+                        <h3>Janco / Zivi</h3>
+                        <p class="second">The key Founding-member and super talented. Basiclly does all the work and also independent as <u>JANCO BOI</u>. Very active in the scene, did a lot of projects and collaborations all around the country and volunteered in Tarbut Movment-2018. </p>
+                        <br>
+                        <a href="https://www.instagram.com/janco_boi/?hl=en" target="_blank" class="btn-dark">JANCO BOI</a>
                     </div>
-                    
-                    <footer></footer>
-                    <div class="mobile-menu">
-                        <a href="index.html"><img src="/dist/assets/images/logo/Logo@3x.png" alt="" id="logo"></a>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="team.html">Team</a></li>
-                        </ul>
+                </div>
+                <div class="card" data-aos-delay="200" data-aos-anchor-placement="top-center" data-aos="fade-left"><img
+                        class="yot" src="/dist/assets/images/YotamRep.jpeg" alt="">
+                    <div>
+                        <h3>Migbaat / Yot</h3>
+                        <p class="second">Very Talented in his unique style of art, a superb inker and tatto artist. Operates mostly independently as <u>MIGBAAT</u>. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime quo voluptate magnam, quos dolore odio provident libero animi tempore?</p>
+                        <br>
+                        <a href="https://www.instagram.com/migbaat/?hl=en" target="_blank" class="btn-dark">MIGBAAT</a>
                     </div>
-                    <script src="js/aos.js"></script>
-                    <script>
-                        AOS.init();
-                        </script>
-    <script src="js/toggle.js"></script>
+                </div>
+                <div class="card" data-aos-delay="200" data-aos-anchor-placement="top-center" data-aos="fade-right"><img
+                        class="omer" src="/dist/assets/images/OmerRep.jpeg" alt="">
+                    <div>
+                        <h3>Omer</h3>
+                        <p class="second">Incharge of technicals and some logistics. Founding member Of BUSH togther with Zivi. <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores accusantium id dignissimos fugiat. Laboriosam temporibus tempore est, dolorum autem ab!</p>
+                        <br>
+                        <a href="" class="btn-dark">SOCIAL</a>
+                    </div>
+                </div>
+                <footer data-aos="fade-left" data-aos-anchor-placement="bottom"><a href="#" class="btn-dark">Go Back Up</a></footer>
+            </div>
+        </div>
+
+    </div>
+    <div class="mobile-menu ">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="team.html" >Team</a></li>
+        </ul>
+    </div>
+    
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+        </script>
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const menu = document.querySelector('.mobile-menu');
+        const team = document.querySelector('.body-team');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            team.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>

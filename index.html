@@ -7,12 +7,16 @@
     <title>MyWebsite</title>
     <link rel="stylesheet" href="css/Normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/dist/css/mobile.css">
 </head>
 <body>
     <header class="header-home">
         <div class="overlay"></div>
         <div class="container">
-            
+            <div class="mobile-nav">
+                <a href="index.html"><img src="/dist/assets/images/logo/Logo@3x.png" alt="" id="logo"></a>
+                <div class="toggle"></div>
+            </div>
             <nav class="main-nav">
                 <a href="index.html"><img src="/dist/assets/images/logo/Logo@3x.png" alt="" id="logo"></a>
                 <ul>
@@ -42,6 +46,23 @@
 
   
     </header>
+    <div class="mobile-menu ">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="team.html" >Team</a></li>
+        </ul>
+    </div>
     <script src="js/typewriter.js"></script>
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const body = document.querySelector('.header-home');
+        const menu = document.querySelector('.mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            body.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

@@ -2,10 +2,19 @@
   .main-nav {
     display: none;
   }
+  .thumbnails-container {
+    max-width: 600px;
+  }
+  .thumbnails-container img {
+    max-width: 600px;
+  }
+  .team-vertical .card {
+    display: block;
+  }
 }
 @media (min-width: 700px) {
   .mobile-menu,
-.toggle {
+.mobile-nav {
     display: none;
   }
 }
